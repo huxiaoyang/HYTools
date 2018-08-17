@@ -7,7 +7,7 @@
 //
 
 #import "NSDate+BSKit.h"
-#import "NSDate+YYAdd.h"
+
 
 @implementation NSDate (BSKit)
 
@@ -44,6 +44,15 @@
         _timestamp = [dateFormatter stringFromDate:date];
     }
     return _timestamp;
+}
+
+- (BOOL)isToday {
+    if (fabs(self.timeIntervalSinceNow) >= 60 * 60 * 24) return NO;
+    return [NSDate new].day == self.day;
+}
+
+- (NSInteger)day {
+    return [[[NSCalendar currentCalendar] components:NSCalendarUnitDay fromDate:self] day];
 }
 
 - (NSString *)formatTimeTimeLine {
