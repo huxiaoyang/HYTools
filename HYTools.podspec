@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
 
   s.name         = 'HYTools'
   s.summary      = 'A tools module for void repo'
-  s.version      = '0.0.2'
+  s.version      = '0.0.3'
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.authors      = { 'huxiaoyang' => 'yohuyang@gmail.com' }
   s.homepage     = 'https://github.com/huxiaoyang/HYTools'
@@ -22,17 +22,12 @@ Pod::Spec.new do |s|
   
   s.default_subspec = 'All'
   s.subspec 'All' do |ss|
-    ss.dependency 'HYTools/Utils'
-    ss.dependency 'HYTools/Categories'
+    ss.dependency 'HYTools/HYBase'
     ss.dependency 'HYTools/YYBase'
   end
 
-  s.subspec 'Categories' do |ss|
-    ss.source_files = 'Classes/Tools+Categories.h', 'Classes/Categories/*.{h,m}'
-  end
-
-  s.subspec 'Utils' do |ss|
-    ss.source_files = 'Classes/Utils/*.{h,m}'
+  s.subspec 'HYBase' do |ss|
+    ss.source_files = 'Classes/Tools+Categories.h', 'Classes/Categories/*.{h,m}', 'Classes/Utils/*.{h,m}'
   end
 
   s.subspec 'YYBase' do |ss|

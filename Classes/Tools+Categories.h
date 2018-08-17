@@ -19,5 +19,7 @@
 #import "UIImage+BSKit.h"
 #import "UIViewController+CurrentVC.h"
 
+#import "BSYAdaptationUtils.h"
+
 
 #endif /* void_Categories_h */

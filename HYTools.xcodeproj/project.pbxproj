@@ -54,6 +54,8 @@
 		756B52042126A9BE002512E7 /* NSBundle+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51F72126A9BD002512E7 /* NSBundle+YYAdd.m */; };
 		756B52052126A9BE002512E7 /* NSObject+YYAddForKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51F82126A9BD002512E7 /* NSObject+YYAddForKVO.m */; };
 		756B52062126A9BE002512E7 /* NSKeyedUnarchiver+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51FA2126A9BE002512E7 /* NSKeyedUnarchiver+YYAdd.m */; };
+		75EDE4352126AF550029DBB6 /* BSYAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EDE4342126AF550029DBB6 /* BSYAlertView.m */; };
+		75EDE43F2126B71D0029DBB6 /* BSYSheetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75EDE43E2126B71D0029DBB6 /* BSYSheetView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -152,6 +154,10 @@
 		756B51F82126A9BD002512E7 /* NSObject+YYAddForKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+YYAddForKVO.m"; sourceTree = "<group>"; };
 		756B51F92126A9BD002512E7 /* NSArray+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+YYAdd.h"; sourceTree = "<group>"; };
 		756B51FA2126A9BE002512E7 /* NSKeyedUnarchiver+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSKeyedUnarchiver+YYAdd.m"; sourceTree = "<group>"; };
+		75EDE4332126AF550029DBB6 /* BSYAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYAlertView.h; sourceTree = "<group>"; };
+		75EDE4342126AF550029DBB6 /* BSYAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSYAlertView.m; sourceTree = "<group>"; };
+		75EDE43D2126B71D0029DBB6 /* BSYSheetView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BSYSheetView.h; sourceTree = "<group>"; };
+		75EDE43E2126B71D0029DBB6 /* BSYSheetView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BSYSheetView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +317,10 @@
 				756B51652126A351002512E7 /* BSYLAManager.m */,
 				756B51632126A351002512E7 /* BSYAdaptationUtils.h */,
 				756B515F2126A351002512E7 /* BSYAdaptationUtils.m */,
+				75EDE4332126AF550029DBB6 /* BSYAlertView.h */,
+				75EDE4342126AF550029DBB6 /* BSYAlertView.m */,
+				75EDE43D2126B71D0029DBB6 /* BSYSheetView.h */,
+				75EDE43E2126B71D0029DBB6 /* BSYSheetView.m */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -422,6 +432,7 @@
 				756B51DD2126A9AD002512E7 /* UIDevice+YYAdd.m in Sources */,
 				756B51D82126A9AD002512E7 /* UIView+YYAdd.m in Sources */,
 				756B52052126A9BE002512E7 /* NSObject+YYAddForKVO.m in Sources */,
+				75EDE4352126AF550029DBB6 /* BSYAlertView.m in Sources */,
 				756B51B32126A801002512E7 /* UIImage+BSKit.m in Sources */,
 				756B52042126A9BE002512E7 /* NSBundle+YYAdd.m in Sources */,
 				756B51B72126A801002512E7 /* NSDictionary+NilSafe.m in Sources */,
@@ -432,6 +443,7 @@
 				756B51922126A351002512E7 /* YYCGUtilities.m in Sources */,
 				756B51DA2126A9AD002512E7 /* UIBarButtonItem+YYAdd.m in Sources */,
 				756B51DB2126A9AD002512E7 /* UIImage+YYAdd.m in Sources */,
+				75EDE43F2126B71D0029DBB6 /* BSYSheetView.m in Sources */,
 				756B51D62126A9AD002512E7 /* UIGestureRecognizer+YYAdd.m in Sources */,
 				756B52022126A9BE002512E7 /* NSNotificationCenter+YYAdd.m in Sources */,
 				756B51FB2126A9BE002512E7 /* NSNumber+YYAdd.m in Sources */,
