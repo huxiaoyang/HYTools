@@ -50,19 +50,21 @@ static const CGFloat void_defaultInterval = 0.0;
 //当我们按钮点击事件 sendAction 时  将会执行  mySendAction
 - (void)mySendAction:(SEL)action to:(id)target forEvent:(UIEvent *)event {
     
-    self.bs_touchTimeInterval = self.bs_touchTimeInterval <= 0 ? void_defaultInterval : self.bs_touchTimeInterval;
-   
-    if (self.isIgnoreEvent) {
-        return;
-    }
-    
-    if (self.bs_touchTimeInterval > 0){
-        [self performSelector:@selector(resetState) withObject:nil afterDelay:self.bs_touchTimeInterval];
+    if ([NSStringFromClass(self.class) isEqualToString:@"UIButton"] ||
+        [NSStringFromClass(self.class) isEqualToString:@"UIBarButtonItem"]) {
+        
+        self.bs_touchTimeInterval = self.bs_touchTimeInterval == 0 ? void_defaultInterval:self.bs_touchTimeInterval;
+        if (self.isIgnoreEvent) {
+            return;
+        } else if (self.bs_touchTimeInterval > 0){
+            [self performSelector:@selector(resetState) withObject:nil afterDelay:self.bs_touchTimeInterval];
+        }
     }
     
     //此处 methodA和methodB方法IMP互换了，实际上执行 sendAction；所以不会死循环
     self.isIgnoreEvent = YES;
     [self mySendAction:action to:target forEvent:event];
+    
 }
 //runtime 动态绑定 属性
 - (void)setIsIgnoreEvent:(BOOL)isIgnoreEvent {
