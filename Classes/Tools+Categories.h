@@ -15,7 +15,6 @@
 #import "NSDate+Report.h"
 #import "NSDictionary+NilSafe.h"
 #import "UIButton+BSKit.h"
-#import "UIControl+BSTouch.h"
 #import "UIImage+BSKit.h"
 #import "UIViewController+CurrentVC.h"
 
