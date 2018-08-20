@@ -20,7 +20,6 @@
 		756B51962126A351002512E7 /* BSYTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51622126A351002512E7 /* BSYTimer.m */; };
 		756B51972126A351002512E7 /* BSYTimerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51642126A351002512E7 /* BSYTimerView.m */; };
 		756B51982126A351002512E7 /* BSYLAManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51652126A351002512E7 /* BSYLAManager.m */; };
-		756B51B12126A801002512E7 /* UIControl+BSTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51A22126A800002512E7 /* UIControl+BSTouch.m */; };
 		756B51B22126A801002512E7 /* NSString+BSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51A32126A800002512E7 /* NSString+BSKit.m */; };
 		756B51B32126A801002512E7 /* UIImage+BSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51A42126A801002512E7 /* UIImage+BSKit.m */; };
 		756B51B42126A801002512E7 /* UIButton+BSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51A92126A801002512E7 /* UIButton+BSKit.m */; };
@@ -87,13 +86,11 @@
 		756B51652126A351002512E7 /* BSYLAManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSYLAManager.m; sourceTree = "<group>"; };
 		756B51662126A351002512E7 /* Tools+Categories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tools+Categories.h"; sourceTree = "<group>"; };
 		756B51A12126A800002512E7 /* UIImage+BSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BSKit.h"; sourceTree = "<group>"; };
-		756B51A22126A800002512E7 /* UIControl+BSTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+BSTouch.m"; sourceTree = "<group>"; };
 		756B51A32126A800002512E7 /* NSString+BSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BSKit.m"; sourceTree = "<group>"; };
 		756B51A42126A801002512E7 /* UIImage+BSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BSKit.m"; sourceTree = "<group>"; };
 		756B51A52126A801002512E7 /* NSDate+BSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+BSKit.h"; sourceTree = "<group>"; };
 		756B51A62126A801002512E7 /* NSString+BSKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BSKit.h"; sourceTree = "<group>"; };
 		756B51A72126A801002512E7 /* NSDictionary+NilSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NilSafe.h"; sourceTree = "<group>"; };
-		756B51A82126A801002512E7 /* UIControl+BSTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+BSTouch.h"; sourceTree = "<group>"; };
 		756B51A92126A801002512E7 /* UIButton+BSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+BSKit.m"; sourceTree = "<group>"; };
 		756B51AA2126A801002512E7 /* NSDate+Report.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Report.m"; sourceTree = "<group>"; };
 		756B51AB2126A801002512E7 /* NSDate+BSKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+BSKit.m"; sourceTree = "<group>"; };
@@ -338,8 +335,6 @@
 				756B51A32126A800002512E7 /* NSString+BSKit.m */,
 				756B51AC2126A801002512E7 /* UIButton+BSKit.h */,
 				756B51A92126A801002512E7 /* UIButton+BSKit.m */,
-				756B51A82126A801002512E7 /* UIControl+BSTouch.h */,
-				756B51A22126A800002512E7 /* UIControl+BSTouch.m */,
 				756B51A12126A800002512E7 /* UIImage+BSKit.h */,
 				756B51A42126A801002512E7 /* UIImage+BSKit.m */,
 				756B51AD2126A801002512E7 /* UIViewController+CurrentVC.h */,
@@ -424,7 +419,6 @@
 				756B52002126A9BE002512E7 /* NSTimer+YYAdd.m in Sources */,
 				756B51B82126A801002512E7 /* UIViewController+CurrentVC.m in Sources */,
 				756B51B52126A801002512E7 /* NSDate+Report.m in Sources */,
-				756B51B12126A801002512E7 /* UIControl+BSTouch.m in Sources */,
 				756B510B2126A327002512E7 /* ViewController.m in Sources */,
 				756B51D92126A9AD002512E7 /* UIFont+YYAdd.m in Sources */,
 				756B51B22126A801002512E7 /* NSString+BSKit.m in Sources */,
