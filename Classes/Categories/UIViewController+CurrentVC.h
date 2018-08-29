@@ -25,4 +25,13 @@
  */
 + (UIViewController *)bs_currentViewController;
 
+
+/**
+ 获取当前 view 的 Controller
+
+ @param view 目标 view
+ @return view的控制器
+ */
++ (NSString *)bs_currentController:(UIView *)view;
+
 @end

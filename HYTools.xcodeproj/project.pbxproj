@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7550AD0621364FE9000908A1 /* UIResponder+Xpath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7550AD0521364FE9000908A1 /* UIResponder+Xpath.m */; };
 		756B51082126A327002512E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51072126A327002512E7 /* AppDelegate.m */; };
 		756B510B2126A327002512E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B510A2126A327002512E7 /* ViewController.m */; };
 		756B510E2126A327002512E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756B510C2126A327002512E7 /* Main.storyboard */; };
@@ -58,6 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7550AD0421364FE9000908A1 /* UIResponder+Xpath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Xpath.h"; sourceTree = "<group>"; };
+		7550AD0521364FE9000908A1 /* UIResponder+Xpath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Xpath.m"; sourceTree = "<group>"; };
 		756B51032126A327002512E7 /* HYTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		756B51062126A327002512E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		756B51072126A327002512E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -339,6 +342,8 @@
 				756B51A42126A801002512E7 /* UIImage+BSKit.m */,
 				756B51AD2126A801002512E7 /* UIViewController+CurrentVC.h */,
 				756B51B02126A801002512E7 /* UIViewController+CurrentVC.m */,
+				7550AD0421364FE9000908A1 /* UIResponder+Xpath.h */,
+				7550AD0521364FE9000908A1 /* UIResponder+Xpath.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -444,6 +449,7 @@
 				756B51D52126A9AD002512E7 /* UIColor+YYAdd.m in Sources */,
 				756B51972126A351002512E7 /* BSYTimerView.m in Sources */,
 				756B51162126A328002512E7 /* main.m in Sources */,
+				7550AD0621364FE9000908A1 /* UIResponder+Xpath.m in Sources */,
 				756B51082126A327002512E7 /* AppDelegate.m in Sources */,
 				756B51E12126A9AD002512E7 /* UITextField+YYAdd.m in Sources */,
 				756B52062126A9BE002512E7 /* NSKeyedUnarchiver+YYAdd.m in Sources */,

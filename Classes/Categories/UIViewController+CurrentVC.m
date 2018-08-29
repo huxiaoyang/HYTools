@@ -76,6 +76,16 @@
     return [UIViewController findBestViewController:viewController];
 }
 
-
++ (NSString *)bs_currentController:(UIView *)view {
+    NSString *result = @"";
+    UIResponder *responder = [view nextResponder];
+    while (responder && ![responder isKindOfClass:[UIViewController class]]) {
+        responder = [responder nextResponder];
+    }
+    if (responder) {
+        result = NSStringFromClass([responder class]);
+    }
+    return result;
+}
 
 @end
