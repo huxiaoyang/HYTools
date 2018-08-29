@@ -63,17 +63,18 @@
                  [subResponder isKindOfClass:UITableViewCell.class]) {
             
             NSIndexPath *indexPath = [(UITableView *)responder indexPathForCell:(UITableViewCell *)subResponder];
-            NSString *indexPathStr = [NSString stringWithFormat:@"%ld-%ld", (long)indexPath.section, (long)indexPath.row];
+            NSString *info = [NSString stringWithFormat:@"indexPath:{%ld, %ld}", (long)indexPath.section, (long)indexPath.row];
             path = [path stringByReplacingOccurrencesOfString:placeholderIndex
-                                                   withString:indexPathStr];
+                                                   withString:info];
             
         }
         else if ([responder isKindOfClass:UICollectionView.class] &&
                  [subResponder isKindOfClass:UICollectionViewCell.class]) {
             
             NSIndexPath *indexPath = [(UICollectionView *)responder indexPathForCell:(UICollectionViewCell *)subResponder];
+            NSString *info = [NSString stringWithFormat:@"indexPath:{%ld, %ld}", (long)indexPath.section, (long)indexPath.row];
             path = [path stringByReplacingOccurrencesOfString:placeholderIndex
-                                                   withString:@(indexPath.hash).stringValue];
+                                                   withString:info];
             
         }
         else if ([responder isKindOfClass:UIView.class]) {
@@ -87,8 +88,9 @@
             else if ([subResponder isKindOfClass:UIView.class]) {
                 
                 NSUInteger index = [((UIView *)responder).subviews indexOfObject:(UIView *)subResponder];
+                NSString *info = [NSString stringWithFormat:@"index:%ld-frame:%@", (long)index, NSStringFromCGRect(((UIView *)subResponder).frame)];
                 path = [path stringByReplacingOccurrencesOfString:placeholderIndex
-                                                       withString:@(index).stringValue];
+                                                       withString:info];
                 
             }
             
@@ -114,5 +116,7 @@
     
     return path;
 }
+
+
 
 @end
