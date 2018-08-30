@@ -87,7 +87,14 @@
             }
             else if ([subResponder isKindOfClass:UIView.class]) {
                 
-                NSUInteger index = [((UIView *)responder).subviews indexOfObject:(UIView *)subResponder];
+                NSMutableArray *memberSubviews = [NSMutableArray array];
+                for (UIView *subView in ((UIView *)responder).subviews) {
+                    if ([subView isMemberOfClass:subResponder.class]) {
+                        [memberSubviews addObject:subView];
+                    }
+                }
+                
+                NSUInteger index = [memberSubviews indexOfObject:(UIView *)subResponder];
                 NSString *info = [NSString stringWithFormat:@"index:%ld-frame:%@", (long)index, NSStringFromCGRect(((UIView *)subResponder).frame)];
                 path = [path stringByReplacingOccurrencesOfString:placeholderIndex
                                                        withString:info];
