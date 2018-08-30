@@ -77,6 +77,15 @@
                                                    withString:info];
             
         }
+//        else if ([responder isKindOfClass:UINavigationBar.class] &&
+//                 [subResponder isKindOfClass:UIBarButtonItem.class]) {
+//            
+//            UIBarButtonItem *item = (UIBarButtonItem *)subResponder;
+//            NSString *info = [NSString stringWithFormat:@"selector:{%@}", NSStringFromSelector(item.action)];
+//            path = [path stringByReplacingOccurrencesOfString:placeholderIndex
+//                                                   withString:info];
+//            
+//        }
         else if ([responder isKindOfClass:UIView.class]) {
             
             if ([subResponder isKindOfClass:UIViewController.class]) {
@@ -95,7 +104,7 @@
                 }
                 
                 NSUInteger index = [memberSubviews indexOfObject:(UIView *)subResponder];
-                NSString *info = [NSString stringWithFormat:@"index:%ld-frame:%@", (long)index, NSStringFromCGRect(((UIView *)subResponder).frame)];
+                NSString *info = [NSString stringWithFormat:@"index:%ld&frame:%@", (long)index, NSStringFromCGRect(((UIView *)subResponder).frame)];
                 path = [path stringByReplacingOccurrencesOfString:placeholderIndex
                                                        withString:info];
                 
