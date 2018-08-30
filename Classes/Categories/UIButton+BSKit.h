@@ -10,8 +10,4 @@
 
 @interface UIButton (BSKit)
 
-// 按钮可点击区域
-@property (nonatomic, assign) UIEdgeInsets hitEdgeInsets;
-
-
 @end

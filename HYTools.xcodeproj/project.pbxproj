@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7550AD0621364FE9000908A1 /* UIResponder+Xpath.m in Sources */ = {isa = PBXBuildFile; fileRef = 7550AD0521364FE9000908A1 /* UIResponder+Xpath.m */; };
+		7550AD102137CD37000908A1 /* UIView+BSKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 7550AD0F2137CD37000908A1 /* UIView+BSKit.m */; };
 		756B51082126A327002512E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B51072126A327002512E7 /* AppDelegate.m */; };
 		756B510B2126A327002512E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 756B510A2126A327002512E7 /* ViewController.m */; };
 		756B510E2126A327002512E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 756B510C2126A327002512E7 /* Main.storyboard */; };
@@ -59,8 +59,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7550AD0421364FE9000908A1 /* UIResponder+Xpath.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIResponder+Xpath.h"; sourceTree = "<group>"; };
-		7550AD0521364FE9000908A1 /* UIResponder+Xpath.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIResponder+Xpath.m"; sourceTree = "<group>"; };
+		7550AD0E2137CD37000908A1 /* UIView+BSKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+BSKit.h"; sourceTree = "<group>"; };
+		7550AD0F2137CD37000908A1 /* UIView+BSKit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+BSKit.m"; sourceTree = "<group>"; };
 		756B51032126A327002512E7 /* HYTools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYTools.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		756B51062126A327002512E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		756B51072126A327002512E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -336,6 +336,8 @@
 				756B51AF2126A801002512E7 /* NSDictionary+NilSafe.m */,
 				756B51A62126A801002512E7 /* NSString+BSKit.h */,
 				756B51A32126A800002512E7 /* NSString+BSKit.m */,
+				7550AD0E2137CD37000908A1 /* UIView+BSKit.h */,
+				7550AD0F2137CD37000908A1 /* UIView+BSKit.m */,
 				756B51AC2126A801002512E7 /* UIButton+BSKit.h */,
 				756B51A92126A801002512E7 /* UIButton+BSKit.m */,
 				756B51A12126A800002512E7 /* UIImage+BSKit.h */,
@@ -436,6 +438,7 @@
 				756B52042126A9BE002512E7 /* NSBundle+YYAdd.m in Sources */,
 				756B51B72126A801002512E7 /* NSDictionary+NilSafe.m in Sources */,
 				756B51FF2126A9BE002512E7 /* NSArray+YYAdd.m in Sources */,
+				7550AD102137CD37000908A1 /* UIView+BSKit.m in Sources */,
 				756B51952126A351002512E7 /* BSYConversion.m in Sources */,
 				756B51FC2126A9BE002512E7 /* NSData+YYAdd.m in Sources */,
 				756B51DF2126A9AD002512E7 /* UITableView+YYAdd.m in Sources */,
