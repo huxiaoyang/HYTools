@@ -31,13 +31,14 @@
 + (UIAlertController *)sheetViewWithTitle:(NSString *)title
                                   message:(NSString *)message
                                    titles:(NSArray<NSString *> *)titles
+                              cancelTitle:(NSString *)cancelTitle
                                   handler:(BSYSheetViewComplate)block {
     
     NSMutableArray *actions = [NSMutableArray arrayWithCapacity:titles.count];
     
-    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [titles enumerateObjectsUsingBlock:^(NSString * _Nonnull actionTitle, NSUInteger idx, BOOL * _Nonnull stop) {
         
-        UIAlertAction *action = [UIAlertAction actionWithTitle:title
+        UIAlertAction *action = [UIAlertAction actionWithTitle:actionTitle
                                                          style:UIAlertActionStyleDefault
                                                        handler:^(UIAlertAction * _Nonnull action) {
                                                            if (block) block(action, idx);
@@ -46,6 +47,15 @@
         
     }];
     
+    if (cancelTitle.length > 0) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           if (block) block(action, titles.count);
+                                                       }];
+        [actions addObject:action];
+    }
+    
     return [BSYSheetView sheetViewWithTitle:title message:message actions:actions];
     
 }
@@ -53,6 +63,7 @@
 + (UIAlertController *)sheetViewWithTitle:(NSString *)title
                                   message:(NSString *)message
                                  entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                              cancelTitle:(NSString *)cancelTitle
                                   handler:(void (^)(id<BSYSheetViewProtocol>))block {
     
     NSMutableArray *actions = [NSMutableArray arrayWithCapacity:entities.count];
@@ -69,6 +80,15 @@
         [actions addObject:action];
         
     }];
+    
+    if (cancelTitle.length > 0) {
+        UIAlertAction *action = [UIAlertAction actionWithTitle:cancelTitle
+                                                         style:UIAlertActionStyleCancel
+                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                           if (block) block(nil);
+                                                       }];
+        [actions addObject:action];
+    }
     
     return [BSYSheetView sheetViewWithTitle:title
                                     message:message
@@ -95,11 +115,13 @@
 + (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                         titles:(NSArray *)titles
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(BSYSheetViewComplate)block {
     
     UIAlertController *VC = [BSYSheetView sheetViewWithTitle:title
                                                      message:message
                                                       titles:titles
+                                                 cancelTitle:cancelTitle
                                                      handler:block];
     
     [[UIViewController bs_currentViewController] presentViewController:VC animated:YES completion:nil];
@@ -109,11 +131,13 @@
 + (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                       entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(void (^)(id<BSYSheetViewProtocol>))block {
     
     UIAlertController *VC = [BSYSheetView sheetViewWithTitle:title
                                                      message:message
                                                     entities:entities
+                                                 cancelTitle:cancelTitle
                                                      handler:block];
     
     [[UIViewController bs_currentViewController] presentViewController:VC animated:YES completion:nil];
@@ -142,11 +166,13 @@
 - (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                         titles:(NSArray *)titles
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(BSYSheetViewComplate)block {
     
     UIAlertController *VC = [BSYSheetView sheetViewWithTitle:title
                                                      message:message
                                                       titles:titles
+                                                 cancelTitle:cancelTitle
                                                      handler:block];
     
     [self presentViewController:VC animated:YES completion:nil];
@@ -156,11 +182,13 @@
 - (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                       entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(void (^)(id<BSYSheetViewProtocol>))block {
     
     UIAlertController *VC = [BSYSheetView sheetViewWithTitle:title
                                                      message:message
                                                     entities:entities
+                                                 cancelTitle:cancelTitle
                                                      handler:block];
     
     [self presentViewController:VC animated:YES completion:nil];

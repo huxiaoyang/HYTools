@@ -40,12 +40,14 @@ typedef void (^BSYSheetViewComplate) (UIAlertAction *action, NSUInteger index);
  @param title 标题
  @param message 描述
  @param titles action titles
+ @param cancelTitle 取消按钮
  @param block 按钮事件回调
  @return UIAlertController实例
  */
 + (UIAlertController *)sheetViewWithTitle:(NSString *)title
                                   message:(NSString *)message
                                    titles:(NSArray<NSString *> *)titles
+                              cancelTitle:(NSString *)cancelTitle
                                   handler:(BSYSheetViewComplate)block;
 
 
@@ -55,12 +57,14 @@ typedef void (^BSYSheetViewComplate) (UIAlertAction *action, NSUInteger index);
  @param title 标题
  @param message 描述
  @param entities 实体集合
+ @param cancelTitle 取消按钮
  @param block 按钮事件回调
  @return UIAlertController实例
  */
 + (UIAlertController *)sheetViewWithTitle:(NSString *)title
                                   message:(NSString *)message
                                  entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                              cancelTitle:(NSString *)cancelTitle
                                   handler:(void (^)(id<BSYSheetViewProtocol>))block;
 
 
@@ -75,12 +79,14 @@ typedef void (^BSYSheetViewComplate) (UIAlertAction *action, NSUInteger index);
 + (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                         titles:(NSArray *)titles
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(BSYSheetViewComplate)block;
 
 /// 自定义entities -> show sheetView
 + (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                       entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(void (^)(id<BSYSheetViewProtocol>))block;
 
 @end
@@ -98,12 +104,14 @@ typedef void (^BSYSheetViewComplate) (UIAlertAction *action, NSUInteger index);
 - (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                         titles:(NSArray *)titles
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(BSYSheetViewComplate)block;
 
 /// 自定义entities -> show sheetView
 - (void)showSheetViewWithTitle:(NSString *)title
                        message:(NSString *)message
                       entities:(NSArray<id<BSYSheetViewProtocol>> *)entities
+                   cancelTitle:(NSString *)cancelTitle
                        handler:(void (^)(id<BSYSheetViewProtocol>))block;
 
 @end

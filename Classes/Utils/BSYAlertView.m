@@ -85,41 +85,11 @@
 
 
 
-@interface UIViewController (BSYAlertView)
-
-/**
- UIAlertController生成器 - 自定义actions
- 
- @param title 标题
- @param message 描述
- @param actions 按钮事件集合
- */
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-                   actions:(NSArray<UIAlertAction *> *)actions;
-
-/**
- UIAlertController生成器 - 自定义actionTitles生成actions
- 
- @param title 标题
- @param message 描述
- @param titles action数组 - 按钮title
- @param block 按钮事件
- */
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-              actionTitles:(NSArray *)titles
-                   handler:(BSYAlertViewComplate)block;
-
-@end
-
-
-
 @implementation UIViewController (BSYAlertView)
 
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-                   actions:(NSArray<UIAlertAction *> *)actions {
+- (void)showAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                       actions:(NSArray<UIAlertAction *> *)actions {
     
     UIAlertController *VC = [BSYAlertView alertViewWithTitle:title
                                                      message:message
@@ -129,10 +99,10 @@
     
 }
 
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-              actionTitles:(NSArray *)titles
-                   handler:(BSYAlertViewComplate)block {
+- (void)showAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                  actionTitles:(NSArray *)titles
+                       handler:(BSYAlertViewComplate)block {
     
     UIAlertController *VC = [BSYAlertView alertViewWithTitle:title
                                                      message:message

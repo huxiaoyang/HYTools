@@ -64,9 +64,9 @@ typedef void (^BSYAlertViewComplate) (UIAlertAction *action, NSUInteger index);
  @param message 描述
  @param actions 按钮事件集合
  */
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-                   actions:(NSArray<UIAlertAction *> *)actions;
+- (void)showAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                       actions:(NSArray<UIAlertAction *> *)actions;
 
 /**
  UIAlertController生成器 - 自定义actionTitles生成actions
@@ -76,9 +76,9 @@ typedef void (^BSYAlertViewComplate) (UIAlertAction *action, NSUInteger index);
  @param titles action数组 - 按钮title
  @param block 按钮事件
  */
-- (void)alertViewWithTitle:(NSString *)title
-                   message:(NSString *)message
-              actionTitles:(NSArray *)titles
-                   handler:(BSYAlertViewComplate)block;
+- (void)showAlertViewWithTitle:(NSString *)title
+                       message:(NSString *)message
+                  actionTitles:(NSArray *)titles
+                       handler:(BSYAlertViewComplate)block;
 
 @end
