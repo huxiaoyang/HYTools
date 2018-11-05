@@ -29,12 +29,32 @@ static inline CGSize BSSize(CGSize size) {
 }
 
 
-static inline UIFont *BSFont(CGFloat value) {
-    return [UIFont systemFontOfSize:BSFloat(value)];
+static inline CGFloat BSSafeBottomFloat(CGFloat value) {
+    
+    if (@available(iOS 11.0, *)) {
+        if (!UIEdgeInsetsEqualToEdgeInsets(UIApplication.sharedApplication.windows[0].safeAreaInsets, UIEdgeInsetsZero)) {
+            return (BSFloat(value) + 34);
+        }
+        return BSFloat(value);
+    }
+    
+    return BSFloat(value);
+}
+
+static inline CGFloat BSSafeTopFloat(CGFloat value) {
+    
+    if (@available(iOS 11.0, *)) {
+        if (!UIEdgeInsetsEqualToEdgeInsets(UIApplication.sharedApplication.windows[0].safeAreaInsets, UIEdgeInsetsZero)) {
+            return (BSFloat(value) + 24);
+        }
+        return BSFloat(value);
+    }
+    
+    return BSFloat(value);
 }
 
 
-// main screen's scale
+// main screen's size (portrait)
 #ifndef kScreenSize
 #define kScreenSize BSScreenSize()
 #endif
@@ -47,6 +67,14 @@ static inline UIFont *BSFont(CGFloat value) {
 // main screen's height (portrait)
 #ifndef kScreenHeight
 #define kScreenHeight BSScreenSize().height
+#endif
+
+#ifndef kSafeAreaInsetsTop
+#define kSafeAreaInsetsTop BSSafeTopFloat(0)
+#endif
+
+#ifndef kSafeAreaInsetsBottom
+#define kSafeAreaInsetsBottom BSSafeBottomFloat(0)
 #endif
 
 
